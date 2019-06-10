@@ -13,9 +13,9 @@ def get_contestant_name(data, occupation)
   season_array.each do |into_array|
     if into_array[:occupation] == occupation
       return into_array[:name]
-      end 
-    end 
-  end 
+      end
+    end
+  end
 end
 
 def count_contestants_by_hometown(data, hometown)
@@ -25,9 +25,9 @@ def count_contestants_by_hometown(data, hometown)
     season_array.each do |into_array|
       if into_array[:hometown] == hometown
         counter+=1
-      end 
-  end 
- end 
+      end
+  end
+ end
  return counter
 end
 
