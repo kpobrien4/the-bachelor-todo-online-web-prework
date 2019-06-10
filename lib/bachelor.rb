@@ -2,7 +2,6 @@ require 'pry'
 def get_first_name_of_season_winner(data, season)
   # code here
   data[season].each do |people|
-    binding.pry
          people.each do |attribute,value|
           if value == "Winner"
               full_name = people["name"]
