@@ -13,26 +13,30 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
-  data.each do |season, season_array|
-  season_array.each do |into_array|
-    if into_array[:occupation] == occupation
-      return into_array[:name]
+  data.each do |season, array|
+      array.each do |people|
+        people.each do |attribute,value|
+          if value == occupation
+            return people["name"]
+          end
+        end
       end
     end
-  end
 end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
   counter = 0
-  data.each do |season,season_array|
-    season_array.each do |into_array|
-      if into_array[:hometown] == hometown
-        counter+=1
+    data.each do |season, array|
+      array.each do |hash|
+        hash.each do |attribute,value|
+          if value == hometown
+            counter += 1
+          end
+        end
       end
-  end
- end
- return counter
+    end
+  counter
 end
 
 def get_occupation(data, hometown)
