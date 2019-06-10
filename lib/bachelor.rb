@@ -37,6 +37,9 @@ def get_occupation(data, hometown)
     season_array.each do |into_array|
       if into_array[:hometown] == hometown
       return into_array[:name]
+    end
+  end
+end
 end
 
 def get_average_age_for_season(data, season)
