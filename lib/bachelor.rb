@@ -54,4 +54,17 @@ end
 
 def get_average_age_for_season(data, season)
   # code here
+  age = 0
+count = 0
+  data[season].each do |hash|
+    hash.each do |attribute,value|
+      if attribute == "age"
+        count += 1
+        age += value.to_f
+      end
+    end
+  end
+
+   answer = (age/count).round
+return answer
 end
